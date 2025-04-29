@@ -234,7 +234,7 @@ PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
 endif
 
 # ThemeOverlays
-include packages/overlays/Themes/themes.mk
+#include packages/overlays/Themes/themes.mk
 
 # Root
 PRODUCT_PACKAGES += \
