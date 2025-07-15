@@ -178,8 +178,10 @@ endif
 endif
 
 # Set on-device compilation mode for SystemUI.
+ifeq ($(TARGET_BUILD_VARIANT),user)
 PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.systemuicompilerfilter=speed-profile
+endif
 
 ifeq ($(TARGET_BUILD_VARIANT),userdebug)
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
