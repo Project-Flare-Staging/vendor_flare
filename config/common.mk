@@ -177,12 +177,9 @@ PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
 endif
 endif
 
-# SystemUI
-PRODUCT_DEXPREOPT_SPEED_APPS += \
-    SystemUI
-
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    dalvik.vm.systemuicompilerfilter=speed
+# Set on-device compilation mode for SystemUI.
+PRODUCT_PROPERTY_OVERRIDES += \
+    dalvik.vm.systemuicompilerfilter=speed-profile
 
 ifeq ($(TARGET_BUILD_VARIANT),userdebug)
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
